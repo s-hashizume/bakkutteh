@@ -1,1 +1,325 @@
 @charset "utf-8";
+
+/* ------------------------------------------全体に対する指定-------------------------- */
+body {
+    color: #fff;
+    background-color: #FCD037;
+    font-family: "Kokoro";
+    line-height: 2;
+    letter-spacing: 0.06em;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+/* ------------------------------------------ページのヘッダーエリア-------------------------- */
+.title-logo img {
+    width: 64px;
+    height: 98px;
+}
+
+.header-icon img {
+    width: 40px;
+    height: 40px;
+}
+
+#header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 40px;
+    position: fixed;
+    z-index: 2;
+}
+/* ------------------------------------------トップの黄色いエリア-------------------------- */
+.top-visual {
+    padding: 64px 4%;
+}
+
+.top-visual-contents {
+    max-width: 480px;
+    margin: auto;
+}
+
+
+.top-visual-contents-block {
+    position: relative;
+}
+
+.top-illust {
+    width: 300px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -20px;
+    margin: auto;
+}
+
+.top-illust img {
+    margin: auto;
+}
+
+.top-photo img {
+    padding-top: 72px;
+    width: 460px;
+    height: 681px;
+}
+
+
+.character {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+.character img {
+    width: 72px;
+}
+
+/* ------------------------------------------真ん中のギザギザ赤いエリア-------------------------- */
+.about::before {
+    content: "";/*content: "";を入れないと認識されない*/
+    background: url("../images/line-red.png") repeat-x center top;
+    height: 40px;
+    width: 100%;
+    background-size: contain;
+    position: absolute;
+    top: -20px;/*こうしないとpadding64pxと「ばくてーとは？」の間に生成される*/
+}
+
+
+.about {
+    background: #e9503a;
+    color: #fff;
+    padding: 64px 0;
+    position: relative;/*左右のアニメーションがposition: absolute;を使用するため */
+}
+
+
+.about-description {
+
+}
+
+.description-title {
+    font-size: 30px;
+    text-align: center;
+}
+
+.description-text {
+    text-align: center;
+    padding-top: 40px;
+    margin-bottom: 40px;
+}
+
+.about-image {
+}
+
+.about-image img {
+    max-width: 640px;
+    display: block;
+    margin: 0 auto;
+}
+
+.about-instagram {
+
+}
+.about-instagram img {
+    display: block;
+    width: 96px;
+    margin-left: auto;
+    margin-right: 240px;
+}
+.about-flow-character-left {
+    background-image: url(../images/text-bakkutteh-yellow.svg);
+    background-size: auto;
+    background-repeat: repeat-y;
+    position: absolute;
+    top: -40px;
+    height: 110%;
+    width: 32px;
+
+}
+
+.about-flow-character-left::before {
+    content: "";
+    width: 2px;
+    background-color: #fcd037;
+    position: absolute;
+    height: 100%;
+    left: 40px;
+}
+
+.about-flow-character-right {
+    right: 51%;
+    margin-right: calc(-50% - 26px);
+    background-image: url(../images/text-bakkutteh-yellow.svg);
+    background-size: auto;
+    background-repeat: repeat-y;
+    position: absolute;
+    top: -40px;
+    height: 110%;
+    width: 32px;
+}
+
+.about-flow-character-right::before {
+    content: "";
+    width: 2px;
+    background-color: #fcd037;
+    position: absolute;
+    height: 100%;
+    right: 40px;
+}
+
+/* -------------------------------ショップ紹介エリア----------------------------------------- */
+.store {
+    background-color: #fcd037;
+    color: #e9503a;
+    padding: 80px 0;
+    position: relative;
+}
+
+.store::before{
+    background: url(../images/line-yellow.png) center top;
+    content: "";
+    display: block;
+    position: absolute;
+    height: 40px;
+    width: 100%;
+    top: -20px;
+    background-size: contain;
+}
+
+.store-visual {
+    max-width: 400px;
+    margin: auto;
+}
+
+.store-visual-character {
+    width: 160px;
+    margin: 0 auto -24px;
+    position: relative;
+}
+
+
+.store-visual-area {
+    position: relative;
+}
+
+.store-visual-area-img img {
+    width: 400px;
+    vertical-align: bottom;
+}
+
+.store-visual-area-title {
+    width: 400px;
+    position: absolute;
+    bottom: 16px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.m-anime-shop.is-active {
+
+}
+
+/* ---------ショップ情報エリア--------- */
+.store-infomation {
+    width: 400px;
+    margin: auto;
+}
+
+.store-infomation-title {
+    margin-bottom: 16px;
+    text-align: center;
+
+}
+
+.store-infomation-title img {
+    width: 172px;
+    height: 16px;
+}
+
+.store-infomation-text {
+    margin-bottom: 24px;
+}
+
+.store-infomation-text li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.store-infomation-text-title {
+    width: 80px;
+}
+
+.store-infomation-text-content {
+
+}
+
+.store-infomation-access-button {
+    width: 124px;
+    margin: auto;
+}
+
+/* -------------------------------------mainのフッダーエリア-------------------------------- */
+
+.footer-visual {
+    padding-bottom: 80px;
+}
+
+.footer-visual-contents {
+    max-width: 400px;
+    margin: auto;
+}
+
+.footer-visual-contents-illust {
+    width: 240px;
+    margin: auto;
+}
+
+.footer-visual-contents-logo {
+    width: 280px;
+    margin: auto;
+}
+
+/* -------------------------------------ページのフッダーエリア-------------------------------- */
+
+
+footer {
+    background-color: #e9503a;
+    color: #fff;
+    padding: 20px 0 40px;
+    position: relative;
+}
+
+footer::before {
+    background: url(../images/line-red.png);
+    background-size: contain;
+    content: "";
+    display: block;
+    position: absolute;
+    top: -20px;
+    width: 100%;
+    height: 40px;
+
+}
+.footer-contents {
+
+
+}
+
+.footer-copyright {
+    text-align: center;
+    font-size: 12px;
+}
