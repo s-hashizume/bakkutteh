@@ -147,7 +147,10 @@ a {
     top: -40px;
     height: 110%;
     width: 32px;
-
+    animation-name: bgAnimLeft;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
 
 .about-flow-character-left::before {
@@ -157,6 +160,15 @@ a {
     position: absolute;
     height: 100%;
     left: 40px;
+}
+
+@keyframes bgAnimLeft {
+    0%{
+        background-position: 0px 0px;
+    }
+    100%{
+        background-position: 0px 1200px;
+    }
 }
 
 .about-flow-character-right {
@@ -169,6 +181,10 @@ a {
     top: -40px;
     height: 110%;
     width: 32px;
+    animation-name: bgAnimRight;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
 
 .about-flow-character-right::before {
@@ -178,6 +194,15 @@ a {
     position: absolute;
     height: 100%;
     right: 40px;
+}
+
+@keyframes bgAnimRight {
+    0%{
+        background-position: 0% 1200px;
+    }
+    100%{
+        background-position: 0px 0px;
+    }
 }
 
 /* -------------------------------ショップ紹介エリア----------------------------------------- */
@@ -229,8 +254,40 @@ a {
     margin: auto;
 }
 .m-anime-shop.is-active {
-
+    opacity: 1;
 }
+
+.m-anime-shop__path {
+    stroke: #e9503a;
+    stroke-width: 2;
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 0;
+}
+
+.m-anime-shop.is-active .m-anime-shop__path {
+    animation-name: anime_shop;
+    animation-fill-mode: forwards;
+    animation-duration: 4s;
+    animation-timing-function: ease-in;
+}
+
+@keyframes anime_shop {
+    0% {
+      stroke-dashoffset: 2000;
+      fill: transparent;
+    }
+    40% {
+      stroke-dashoffset: 2000;
+      fill: transparent;
+    }
+    50% {
+      fill: transparent;
+    }
+    100% {
+      stroke-dashoffset: 0;
+      fill: #fcd037;
+    }
+  }
 
 /* ---------ショップ情報エリア--------- */
 .store-infomation {
