@@ -4,7 +4,7 @@
 body {
     color: #fff;
     background-color: #FCD037;
-    font-family: "Kokoro";
+    font-family: "Hannotate TC";
     line-height: 2;
     letter-spacing: 0.06em;
 }
@@ -38,7 +38,7 @@ a {
 }
 /* ------------------------------------------トップの黄色いエリア-------------------------- */
 .top-visual {
-    padding: 64px 4%;
+    padding: 64px 4% 0;
 }
 
 .top-visual-contents {
@@ -82,8 +82,11 @@ a {
     justify-content: space-between;
     align-items: center;
 }
-.character img {
+.character li {
     width: 72px;
+}
+.character img {
+    width: 100%;
 }
 
 /* ------------------------------------------真ん中のギザギザ赤いエリア-------------------------- */
@@ -125,7 +128,7 @@ a {
 }
 
 .about-image img {
-    max-width: 640px;
+    max-width: 100%;
     display: block;
     margin: 0 auto;
 }
@@ -379,4 +382,115 @@ footer::before {
 .footer-copyright {
     text-align: center;
     font-size: 12px;
+}
+
+@media (max-width: 900px) {
+    body {
+        font-size: 13px;
+        letter-spacing: 0.08em;
+        width: auto;
+    }
+
+    #header {
+        padding: 8px 16px;
+        width: 100%;
+    }
+
+    .title-logo img {
+        width: 32px;
+    }
+
+    .header-icon img {
+        width: 28px;
+    }
+
+    .top-illust {
+        width: 240px;
+    }
+    .top-illust img {
+        width: 100%;
+    }
+
+    .top-photo {
+        padding: 0 2.13% 0;
+    }
+    .top-photo img {
+        width: 100%;
+        height: auto;
+    }
+
+    .character li {
+        width: 56px;
+    }
+
+    .hidden-sm {
+        display: none !important;
+    }
+
+    .about-image {
+        width: 140%;
+        margin-left: -20%;
+    }
+
+    .description-text {
+        padding: 40px 14.93% 0;
+        text-align: start;
+    }
+    .about-instagram {
+        width: 96px;
+        margin-right: 40px;
+        margin-left: auto;
+    }
+
+    .about-flow-character-right {
+        right: 55%;
+    }
+
+    .store-visual {
+        padding: 0 4.26%;
+    }
+
+    .store-visual-character {
+        width: 160px;
+        margin: 0 auto -24px;
+    }
+
+    .store-visual-area-img img {
+        width: 100%;
+    }
+
+    .store-visual-area-title {
+        width: 100%;
+        padding: 0 6.4%;
+    }
+
+    .container {
+        overflow: hidden;
+    }
+
+    .store-infomation {
+        width: 100%;
+        padding: 0 4.26%;
+    }
+
+    .store-infomation-title {
+        margin-bottom: 0;
+        margin-top: 15px;
+    }
+    .store-infomation-title img{
+        height: 12px;
+    }
+
+    .footer-visual {
+        padding-bottom: 71.5px;
+    }
+
+    .footer-visual-contents-illust {
+        margin-bottom: 31.5px;
+    }
+
+    .footer-copyright {
+        font-size: 12px;
+        line-height: 1;
+    }
 }
