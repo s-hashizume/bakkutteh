@@ -58,6 +58,7 @@ a {
     right: 0;
     top: -20px;/*初期位置から数えて　左に0 右に０　上に20pxの位置に置かれる*/
     margin: auto;/*左右のautoは両側から離れたがるので左右中央になる 上下には効かない　widthを指定しなければならない*/
+    z-index: 5;
 }
 
 .top-illust img {
@@ -68,6 +69,7 @@ a {
     padding: 72px 2.13% 0;/*親要素を100%とした時の％で内側余白を指定することができる*/
 }
 .top-photo img {
+    position: relative;
     width: 460px;
     height: 681px;
     z-index: 4;/*z-indexで指定した数が"大きい"ほど手前に重なる*/
@@ -84,6 +86,7 @@ a {
     margin: auto;/*左右のautoは両側から離れたがるので左右中央になる 上下には効かない　widthを指定しなければならない*/
     justify-content: space-between;/*flexボックス内のアイテムを要素の両端揃いにする*/
     align-items: center;/*flexアイテムを上下で見た時に上下のどの位置に配置するかを指定する　この場合はセンター*/
+    z-index: 5;
 }
 .character li {
     width: 72px;
