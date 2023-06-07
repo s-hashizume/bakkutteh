@@ -4,17 +4,17 @@
 body {
     color: #fff;
     background-color: #FCD037;
-    font-family: "Hannotate TC";
-    line-height: 2;
-    letter-spacing: 0.06em;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    line-height: 2;/*要素のフォントサイズに「2」をかけた高さの行間になる*/
+    letter-spacing: 0.06em;/*文字間隔指定で文字の6%の感覚を付与する*/
 }
 
 li {
-    list-style: none;
+    list-style: none;/*箇条書きの点をなくす*/
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none;/*リンクの青くするのを消している*/
 }
 /* ------------------------------------------ページのヘッダーエリア-------------------------- */
 .title-logo img {
@@ -28,27 +28,27 @@ a {
 }
 
 #header {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    width: 100%;/*親要素の幅を100%としてどのくらいの幅を取るか指定できる*/
+    display: flex;/*フレキシブルボックス化する*/
+    justify-content: space-between;/*フレックスアイテムを要素の両端に寄せる*/
+    align-items: center;/*フレックスアイテムを縦軸で見た時に上下のどこで揃えるか.この場合は上下中央*/
     padding: 8px 40px;
-    position: fixed;
-    z-index: 5;
+    position: fixed;/*スクロールしてもその場所に固定される*/
+    z-index: 5;/*z-indexで指定した数が"大きい"ほど手前に重なる*/
 }
 /* ------------------------------------------トップの黄色いエリア-------------------------- */
 .top-visual {
-    padding: 64px 4.26% 0;
+    padding: 64px 4.26% 0;/*親要素を100%とした時の％で内側余白を指定することができる*/
 }
 
 .top-visual-contents {
-    max-width: 480px;
-    margin: auto;
+    max-width: 480px;/*要素がこれ以上大きくならない幅*/
+    margin: auto;/*左右のautoは両側から離れたがるので左右中央になる 上下には効かない　widthを指定しなければならない*/
 }
 
 
 .top-visual-contents-block {
-    position: relative;
+    position: relative;/*illustを絶対値で場所指定するため*/
 }
 
 .top-illust {
@@ -56,34 +56,34 @@ a {
     position: absolute;
     left: 0;
     right: 0;
-    top: -20px;
-    margin: auto;
+    top: -20px;/*初期位置から数えて　左に0 右に０　上に20pxの位置に置かれる*/
+    margin: auto;/*左右のautoは両側から離れたがるので左右中央になる 上下には効かない　widthを指定しなければならない*/
 }
 
 .top-illust img {
-    margin: auto;
+    margin: auto;/*左右のautoは両側から離れたがるので左右中央になる 上下には効かない　widthを指定しなければならない*/
 }
 
 .top-photo {
-    padding: 72px 2.13% 0;
+    padding: 72px 2.13% 0;/*親要素を100%とした時の％で内側余白を指定することができる*/
 }
 .top-photo img {
     width: 460px;
     height: 681px;
-    z-index: 4;
+    z-index: 4;/*z-indexで指定した数が"大きい"ほど手前に重なる*/
 }
 
 
 .character {
-    display: flex;
+    display: flex;/*フレキシブルボックス化する*/
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
-    left: 0;
-    margin: auto;
-    justify-content: space-between;
-    align-items: center;
+    left: 0;/*初期位置から数えて四方とも0の位置に置かれる*/
+    margin: auto;/*左右のautoは両側から離れたがるので左右中央になる 上下には効かない　widthを指定しなければならない*/
+    justify-content: space-between;/*flexボックス内のアイテムを要素の両端揃いにする*/
+    align-items: center;/*flexアイテムを上下で見た時に上下のどの位置に配置するかを指定する　この場合はセンター*/
 }
 .character li {
     width: 72px;
@@ -95,13 +95,13 @@ a {
 /* ------------------------------------------真ん中のギザギザ赤いエリア-------------------------- */
 .about::before {
     content: "";/*content: "";を入れないと認識されない*/
-    background: url("../images/line-red.png") repeat-x center top;
+    background: url("../images/line-red.png") repeat-x center top;/*repeatで要素より画像の方が小さい時繰り返し処置を行うがrepeat-xでx軸方向（横）に繰り返し表示を行う*/
     height: 40px;
     width: 100%;
-    background-size: contain;
+    background-size: contain;/*元画像の縦横比は保持して要素に全て収まるように調整*/
     position: absolute;
     top: -35px;/*こうしないとpadding64pxと「ばくてーとは？」の間に生成される*/
-    z-index: 3;
+    z-index: 3;/*z-indexで指定した数が"大きい"ほど手前に重なる*/
 }
 
 
@@ -119,11 +119,11 @@ a {
 
 .description-title {
     font-size: 30px;
-    text-align: center;
+    text-align: center;/* textをその要素の水平方向の中央に配置できる*/
 }
 
 .description-text {
-    text-align: center;
+    text-align: center;/* textをその要素の水平方向の中央に配置できる*/
     padding-top: 40px;
     margin-bottom: 40px;
 }
@@ -134,7 +134,7 @@ a {
 .about-image img {
     max-width: 100%;
     display: block;
-    margin: 0 auto;
+    margin: 0 auto;/*要素内の左右中央になる widthが指定されている*/
 }
 
 .about-instagram {
@@ -143,31 +143,31 @@ a {
 .about-instagram img {
     display: block;
     width: 96px;
-    margin-left: auto;
-    margin-right: 240px;
+    margin-left: auto;/*要素の左端から限りなく離れる*/
+    margin-right: 240px;/*限りなく離れたところから右から240pxの位置に来る*/
 }
 .about-flow-character-left {
     background-image: url(../images/text-bakkutteh-yellow.svg);
-    background-size: auto;
-    background-repeat: repeat-y;
+    background-size: auto;/*元画像の大きさのまま表示*/
+    background-repeat: repeat-y;/*繰り返し表示としてy軸方向（縦）に繰り返させる*/
     position: absolute;
-    top: -40px;
+    top: -40px;/*初期位置から上に40pxの位置に配置される*/
     height: 110%;
     width: 32px;
-    animation-name: bgAnimLeft;
-    animation-duration: 20s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+    /*アニメーション処理*/
+    animation-name: bgAnimLeft;/*@keyframesによって定義されているanimationを指定している*/
+    animation-duration: 20s;/*一回のアニメーションが終了するまでの所要時間を指定する*/
+    animation-timing-function: linear;/*アニメーションが周期間どのように進行するのかを指定する　この場合直線運動を行う　linear=直線的*/
+    animation-iteration-count: infinite;/*アニメーションを何周期させるのかを定義する　今回の場合無制限に繰り返す infinite=無限*/
 }
 
 .about-flow-character-left::before {
-    content: "";
-    width: 2px;
+    content: "";/*このコンテンツを入れないと発火しない*/
+    width: 2px;/*2pxの幅のものができる*/
     background-color: #fcd037;
     position: absolute;
+    left: 40px;/*絶対値で左から40pxの位置に配置する*/
     height: 100%;
-    left: 40px;
-
 }
 
 @keyframes bgAnimLeft {
@@ -180,12 +180,12 @@ a {
 }
 
 .about-flow-character-right {
-    right: 51%;
-    margin-right: calc(-50% - 26px);
+    margin-right: calc(-50% - 26px);/*これは*/
     background-image: url(../images/text-bakkutteh-yellow.svg);
     background-size: auto;
     background-repeat: repeat-y;
     position: absolute;
+    right: 51%;
     top: -40px;
     height: 110%;
     width: 32px;
@@ -226,10 +226,10 @@ a {
     content: "";
     display: block;
     position: absolute;
+    top: -20px;/*初期位置から上に20pxの位置に配置する*/
     height: 40px;
-    width: 100%;
-    top: -20px;
-    background-size: contain;
+    width: 100%;/*親要素を100%とした時の横幅率*/
+    background-size: contain;/*元の画像の縦横比を変えずに要素内にはめ込む*/
 }
 
 .store-visual {
