@@ -132,7 +132,7 @@ a {
 }
 
 .about-image img {
-    max-width: 100%;
+    max-width: 640px;
     display: block;
     margin: 0 auto;/*要素内の左右中央になる widthが指定されている*/
 }
