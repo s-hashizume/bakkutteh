@@ -408,16 +408,31 @@ footer::before {
     }
 
     #header {
-        padding: 8px 16px;
+        padding: 8px 16px 0;
         width: 100%;
     }
 
+    .title-logo {
+        height: 49px;
+    }
     .title-logo img {
         width: 32px;
+        height: 49px;
     }
 
-    .header-icon img {
+    .header-icon {
         width: 28px;
+        height: 28px;
+    }
+
+    .header-icon a {
+        display: block;
+        height: 100%;
+        width: 100%;
+    }
+    .header-icon img {
+        height: 100%;
+        width: 100%;
     }
 
     .top-illust {
@@ -428,7 +443,7 @@ footer::before {
     }
 
     .top-photo {
-        padding: 0 2.13% 0;
+        padding: 72px 7.3px 0;
     }
     .top-photo img {
         width: 100%;
