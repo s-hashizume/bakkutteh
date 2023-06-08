@@ -243,17 +243,23 @@ a {
 .store-visual-character {
     width: 160px;
     margin: 0 auto -24px;
+}
+
+.store-visual-character img {
     position: relative;
+    z-index: 5;
 }
 
 
-.store-visual-area {
-    position: relative;
+.store-visual-area-img {
+    
 }
 
 .store-visual-area-img img {
+    position: relative;
     width: 400px;
     vertical-align: bottom;
+    z-index: 4;
 }
 
 .store-visual-area-title {
