@@ -107,7 +107,7 @@ a {
     width: 100%;
     background-size: contain;/*元画像の縦横比は保持して要素に全て収まるように調整*/
     position: absolute;
-    top: -35px;/*こうしないとpadding64pxと「ばくてーとは？」の間に生成される*/
+    top: -20px;/*こうしないとpadding64pxと「ばくてーとは？」の間に生成される*/
     z-index: 3;/*z-indexで指定した数が"大きい"ほど手前に重なる*/
 }
 
@@ -476,7 +476,7 @@ footer::before {
     }
 
     .description-text {
-        padding: 40px 14.93% 0;
+        padding: 40px  0;
         text-align: start;
     }
     .about-instagram {
