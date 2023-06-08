@@ -1,6 +1,10 @@
 @charset "utf-8";
 
 /* ------------------------------------------全体に対する指定-------------------------- */
+html {
+    /* overflow: hidden; */
+}
+
 body {
     color: #fff;
     background-color: #FCD037;
@@ -520,6 +524,13 @@ footer::before {
         height: 12px;
     }
 
+    .store-infomation-text-title {
+        width: 23.3%;
+    }
+
+    .store-infomation-text-content {
+        width: 76.7%;
+    }
     .footer-visual {
         padding-bottom: 71.5px;
     }
