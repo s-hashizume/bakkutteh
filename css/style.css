@@ -250,7 +250,9 @@ a {
     z-index: 5;
 }
 
-
+.store-visual-area {
+    position: relative;
+}
 .store-visual-area-img {
     
 }
@@ -270,6 +272,7 @@ a {
     right: 0;
     margin: auto;
     padding: 0 25.6px;
+    z-index: 5;
 }
 .m-anime-shop.is-active {
     opacity: 1;
@@ -461,6 +464,11 @@ footer::before {
     .about-image {
         width: 140%;
         margin-left: -20%;
+    }
+
+    .about-image img {
+        width: 525px;
+        height: 517.305px;
     }
 
     .description-text {
