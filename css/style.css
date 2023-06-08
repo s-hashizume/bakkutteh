@@ -4,7 +4,7 @@
 body {
     color: #fff;
     background-color: #FCD037;
-    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
     line-height: 2;/*要素のフォントサイズに「2」をかけた高さの行間になる*/
     letter-spacing: 0.06em;/*文字間隔指定で文字の6%の感覚を付与する*/
 }
@@ -319,6 +319,7 @@ a {
 
 .store-infomation-text {
     margin-bottom: 24px;
+    font-weight: 900;
 }
 
 .store-infomation-text li {
