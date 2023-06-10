@@ -76,7 +76,6 @@ a {
     position: relative;
     width: 460px;
     height: 681px;
-     z-index: 1;/*z-indexで指定した数が"大きい"ほど手前に重なる */
 }
 
 
@@ -90,14 +89,12 @@ a {
     margin: auto;/*左右のautoは両側から離れたがるので左右中央になる 上下には効かない　widthを指定しなければならない*/
     justify-content: space-between;/*flexボックス内のアイテムを要素の両端揃いにする*/
     align-items: center;/*flexアイテムを上下で見た時に上下のどの位置に配置するかを指定する　この場合はセンター*/
-    /* z-index: 5; */
 }
 .character li {
     width: 72px;
 }
 .character img {
     position: relative;
-    z-index: 1;
     width: 100%;
 }
 
@@ -110,7 +107,7 @@ a {
     background-size: contain;/*元画像の縦横比は保持して要素に全て収まるように調整*/
     position: absolute;
     top: -30px;/*こうしないとpadding64pxと「ばくてーとは？」の間に生成される*/
-    /* z-index: 3;z-indexで指定した数が"大きい"ほど手前に重なる */
+    z-index: -1;
 }
 
 
