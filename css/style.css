@@ -38,7 +38,7 @@ a {
     align-items: center;/*フレックスアイテムを縦軸で見た時に上下のどこで揃えるか.この場合は上下中央*/
     padding: 8px 40px;
     position: fixed;/*スクロールしてもその場所に固定される*/
-    z-index: 5;/*z-indexで指定した数が"大きい"ほど手前に重なる*/
+    z-index: 1;/*z-indexで指定した数が"大きい"ほど手前に重なる*/
 }
 /* ------------------------------------------トップの黄色いエリア-------------------------- */
 .top-visual {
@@ -62,7 +62,7 @@ a {
     right: 0;
     top: -20px;/*初期位置から数えて　左に0 右に０　上に20pxの位置に置かれる*/
     margin: auto;/*左右のautoは両側から離れたがるので左右中央になる 上下には効かない　widthを指定しなければならない*/
-    z-index: 5;
+    z-index: 1;
 }
 
 .top-illust img {
@@ -76,7 +76,7 @@ a {
     position: relative;
     width: 460px;
     height: 681px;
-    z-index: 4;/*z-indexで指定した数が"大きい"ほど手前に重なる*/
+     z-index: 1;/*z-indexで指定した数が"大きい"ほど手前に重なる */
 }
 
 
@@ -90,12 +90,14 @@ a {
     margin: auto;/*左右のautoは両側から離れたがるので左右中央になる 上下には効かない　widthを指定しなければならない*/
     justify-content: space-between;/*flexボックス内のアイテムを要素の両端揃いにする*/
     align-items: center;/*flexアイテムを上下で見た時に上下のどの位置に配置するかを指定する　この場合はセンター*/
-    z-index: 5;
+    /* z-index: 5; */
 }
 .character li {
     width: 72px;
 }
 .character img {
+    position: relative;
+    z-index: 1;
     width: 100%;
 }
 
@@ -107,8 +109,8 @@ a {
     width: 100%;
     background-size: contain;/*元画像の縦横比は保持して要素に全て収まるように調整*/
     position: absolute;
-    top: -20px;/*こうしないとpadding64pxと「ばくてーとは？」の間に生成される*/
-    z-index: 3;/*z-indexで指定した数が"大きい"ほど手前に重なる*/
+    top: -30px;/*こうしないとpadding64pxと「ばくてーとは？」の間に生成される*/
+    /* z-index: 3;z-indexで指定した数が"大きい"ほど手前に重なる */
 }
 
 
@@ -251,7 +253,7 @@ a {
 
 .store-visual-character img {
     position: relative;
-    z-index: 5;
+    z-index: 1;
 }
 
 .store-visual-area {
@@ -265,7 +267,7 @@ a {
     position: relative;
     width: 400px;
     vertical-align: bottom;
-    z-index: 4;
+    /* z-index: 4; */
 }
 
 .store-visual-area-title {
@@ -276,7 +278,7 @@ a {
     right: 0;
     margin: auto;
     padding: 0 25.6px;
-    z-index: 5;
+    /* z-index: 5; */
 }
 .m-anime-shop.is-active {
     opacity: 1;
@@ -465,6 +467,11 @@ footer::before {
         display: none !important;
     }
 
+    .about::before {
+        position: absolute;
+        top: -20px;
+    }
+
     .about-image {
         width: 140%;
         margin-left: -20%;
@@ -476,7 +483,7 @@ footer::before {
     }
 
     .description-text {
-        padding: 40px  0;
+        padding: 40px  56px;
         text-align: start;
     }
     .about-instagram {
@@ -530,6 +537,11 @@ footer::before {
 
     .store-infomation-text-content {
         width: 76.7%;
+    }
+
+    .store-infomation-text-title a {
+        color: #fff;
+        text-decoration: none;
     }
     .footer-visual {
         padding-bottom: 71.5px;
