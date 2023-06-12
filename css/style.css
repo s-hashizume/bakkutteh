@@ -158,6 +158,7 @@ a {
     background-repeat: repeat-y;/*繰り返し表示としてy軸方向（縦）に繰り返させる*/
     position: absolute;
     top: -40px;/*初期位置から上に40pxの位置に配置される*/
+    left: -0.6%;
     height: 110%;
     width: 32px;
     /*アニメーション処理*/
