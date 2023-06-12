@@ -470,6 +470,10 @@ footer::before {
         display: none !important;
     }
 
+    .about-flow-character-left {
+        right: 94%;
+    }
+    
     .about::before {
         position: absolute;
         top: -20px;
