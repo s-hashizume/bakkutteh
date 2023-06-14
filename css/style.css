@@ -78,9 +78,9 @@ a {
     padding: 72px 2.13% 0;/*親要素を100%とした時の％で内側余白を指定することができる*/
 }
 .top-photo img {
-    position: relative;
     width: 460px;
     height: 681px;
+    display: block;/*imgタグは旧inline形式であり、devツールで確認するとdisplay: inline;であることが確認できる。これにより画像下部と親要素の間に間隙が発生することがある。これはテキスト行におけるディセンダーを許容するためである。*/
 }
 
 
@@ -111,7 +111,7 @@ a {
     width: 100%;
     background-size: contain;/*元画像の縦横比は保持して要素に全て収まるように調整*/
     position: absolute;
-    top: -30px;/*こうしないとpadding64pxと「ばくてーとは？」の間に生成される*/
+    top: -20px;/*こうしないとpadding64pxと「ばくてーとは？」の間に生成される*/
     z-index: -1;
 }
 
@@ -163,14 +163,20 @@ a {
     background-repeat: repeat-y;/*繰り返し表示としてy軸方向（縦）に繰り返させる*/
     position: absolute;
     top: -40px;/*初期位置から上に40pxの位置に配置される*/
-    right: 98.5%;
+    left: -1%;
     height: 110%;
     width: 32px;
     /*アニメーション処理*/
-    animation-name: bgAnimLeft;/*@keyframesによって定義されているanimationを指定している*/
-    animation-duration: 20s;/*一回のアニメーションが終了するまでの所要時間を指定する*/
-    animation-timing-function: linear;/*アニメーションが周期間どのように進行するのかを指定する　この場合直線運動を行う　linear=直線的*/
-    animation-iteration-count: infinite;/*アニメーションを何周期させるのかを定義する　今回の場合無制限に繰り返す infinite=無限*/
+    /*--animationの一括指定--
+    要素 {
+	    animation: ①-name ②-duration ③-timing ④-delay ⑤-iteration ⑥-direction ⑦-fill ⑧-play;
+    }--*/
+
+    animation: bgAnimLeft 20s linear infinite;
+    /* animation-name: bgAnimLeft;/*@keyframesによって定義されているanimationを指定している*/
+    /* animation-duration: 20s;一回のアニメーションが終了するまでの所要時間を指定する */
+    /* animation-timing-function: linear;アニメーションが周期間どのように進行するのかを指定する　この場合直線運動を行う　linear=直線的 */
+    /* animation-iteration-count: infinite;アニメーションを何周期させるのかを定義する　今回の場合無制限に繰り返す infinite=無限 */ 
 }
 
 .about-flow-character-left::before {
@@ -201,10 +207,11 @@ a {
     top: -40px;
     height: 110%;
     width: 32px;
-    animation-name: bgAnimRight;
+    animation: bgAnimRight 20s linear infinite;
+    /* animation-name: bgAnimRight;
     animation-duration: 20s;
     animation-timing-function: linear;
-    animation-iteration-count: infinite;
+    animation-iteration-count: infinite; */
 }
 
 .about-flow-character-right::before {
