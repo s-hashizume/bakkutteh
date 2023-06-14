@@ -163,7 +163,7 @@ a {
     background-repeat: repeat-y;/*繰り返し表示としてy軸方向（縦）に繰り返させる*/
     position: absolute;
     top: -40px;/*初期位置から上に40pxの位置に配置される*/
-    left: -1%;
+    left: -10px;
     height: 110%;
     width: 32px;
     /*アニメーション処理*/
@@ -478,7 +478,7 @@ footer::before {
     }
 
     .about-flow-character-left {
-        right: 94%;
+
     }
     
     .about::before {
