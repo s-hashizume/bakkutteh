@@ -420,6 +420,10 @@ footer::before {
 }
 
 @media (max-width: 900px) {
+    a[href*='tel:'] {
+        pointer-events: none;
+    }
+
     body {
         font-size: 13px;
         letter-spacing: 0.08em;
@@ -551,6 +555,7 @@ footer::before {
 
     .store-infomation-text-content {
         width: 76.7%;
+
     }
 
     .store-infomation-text-title a {
