@@ -359,8 +359,8 @@ a {
     width: 80px;
 }
 
-.store-infomation-text-content {
-
+.store-infomation-text-content a {
+    color: inherit;
 }
 
 .store-infomation-access-button {
@@ -421,9 +421,6 @@ footer::before {
 }
 
 @media (max-width: 900px) {
-    a[href*='tel:'] {
-        pointer-events: none;
-    }
 
     body {
         font-size: 13px;
