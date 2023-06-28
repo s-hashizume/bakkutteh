@@ -163,7 +163,7 @@ a {
     background-repeat: repeat-y;/*繰り返し表示としてy軸方向（縦）に繰り返させる*/
     position: absolute;
     top: -40px;/*初期位置から上に40pxの位置に配置される*/
-    transform: translateX(-10px);
+    transform: translateX(-50%);
     height: 110%;
     width: 32px;
     /*アニメーション処理*/
@@ -202,9 +202,10 @@ a {
     background-image: url(../images/text-bakkutteh-yellow.svg);
     background-size: auto;
     background-repeat: repeat-y;
+    /* transform: translateX(1425px); */
     position: absolute;
-    right: 51%;
     top: -40px;
+    right: 51%;
     height: 110%;
     width: 32px;
     animation: bgAnimRight 20s linear infinite;
@@ -574,4 +575,10 @@ footer::before {
         font-size: 12px;
         line-height: 1;
     }
+}
+
+@media (min-device-width: 744px) {
+	a[href*='tel:'] {
+		pointer-events: none;
+	}
 }
